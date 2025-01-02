@@ -52,6 +52,7 @@ a:hover {
   height: 2px;
   width: 300px;
   background: url("./assets/logo (1).png") repeat-x;
+  border-bottom: 1px solid gray;
 }
 h3 {
   font-family: Georgia, "Times New Roman", Times, serif;
@@ -307,8 +308,8 @@ h2.img-remove {
   margin: 0 0 8px 0;
   color: #666;
 }
-.contact-form .button {
-  /* background: url(../images/submit-btn.png) no-repeat; */
+.submit_button .button {
+  background: url(./assets/submit-btn.png) no-repeat;
   cursor: pointer;
   width: 100px;
   height: 28px;
