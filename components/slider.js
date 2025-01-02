@@ -1,52 +1,47 @@
-"use client"
+"use client";
 import React from "react";
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
-import 'swiper/css/effect-cards';
-import { Autoplay, EffectCards } from 'swiper/modules';
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/effect-cards";
+import { EffectFlip, Pagination, Navigation } from 'swiper/modules';
+import Image from "next/image";
+import Slide1 from "@/app/assets/slide-1.png"
+import Slide2 from "@/app/assets/slide-2.png"
+import Slide3 from "@/app/assets/slide-3.png"
 
+import 'swiper/css';
+import 'swiper/css/effect-flip';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
 
 function Slider() {
-      
-
   return (
     <>
-        <>
-      <Swiper
-        effect={'cards'}
-        grabCursor={true}
-        modules={[Autoplay,EffectCards]}
-        className="mySwiper"
-        autoplay={{
-            delay: 1000, // Delay in milliseconds
-            disableOnInteraction: false,
-          }}
-      >
+    <Swiper
+      effect={'flip'}
+      grabCursor={true}
+      pagination={true}
+     
+      modules={[EffectFlip, Pagination, Navigation]}
+      className="mySwiper"
+    >
+      <SwiperSlide>
+      <Image src={Slide1} width={400} height={300} objectFit="contain" alt="Slide1" />
 
-        <SwiperSlide>
-            <div className="h-[200px] w-[400px] bg-black">
-ssss
-            </div>
-        </SwiperSlide>
-        <SwiperSlide>
-        <div className="h-[200px] w-[400px] bg-emerald-500">
-ssss
-            </div>
-        </SwiperSlide>
-        <SwiperSlide>
-        <div className="h-[200px] w-[400px] bg-fuchsia-600">
-ssss
-            </div>
-        </SwiperSlide>
-        <SwiperSlide>
-        <div className="h-[200px] w-[400px] bg-violet-800">
-ssss
-            </div>
-        </SwiperSlide>
-        
-      </Swiper>
-    </>
-    </>
+      </SwiperSlide>
+      <SwiperSlide>
+      <Image src={Slide2} />
+
+      </SwiperSlide>
+      <SwiperSlide>
+      <Image src={Slide3} />
+
+      </SwiperSlide>
+    
+  
+     
+    </Swiper>
+  </>
   );
 }
 

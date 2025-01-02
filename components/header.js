@@ -2,15 +2,16 @@ import Image from "next/image";
 import React from "react";
 import logo from "@/app/assets/logo (1).png"
 import request from "@/app/assets/click-to-request-info.png"
+import Link from "next/link";
 
 function Header() {
   return (
     <>
       <div id="header">
         <div className="logo">
-          <a href="#">
+          <Link href="#">
             <Image  src={logo}  width={261} height={70}  />
-          </a>
+          </Link>
         </div>
         <div className="request" id="bookm">
         <Image  src={request}  width={261} height={70}  />
@@ -25,23 +26,23 @@ function Header() {
           <ul className="nav">
             <li className="active1">
               <div>
-                <a href="?index">Home</a>
+                <Link href="/">Home</Link>
               </div>
             </li>
             <li className="active2">
               <div>
-                <a href="?aboutus">About Us</a>
+                <Link href="/about-us">About Us</Link>
               </div>
             </li>
             <li className="active3">
               <div>
-                <a href="?howitworks">How It Works</a>
+                <Link href="/how-it-works">How It Works</Link>
               </div>
             </li>
             {/*<li class="active4"><div><a href="?signup">Get Started</a></div></li>*/}
             <li className="active5">
               <div>
-                <a href="?contactus">Contact Us</a>
+                <Link href="/contact-us">Contact Us</Link>
               </div>
             </li>
           </ul>

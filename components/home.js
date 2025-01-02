@@ -8,13 +8,10 @@ import mastercard from "@/app/assets/icon-mastercard.png";
 import americanxpress from "@/app/assets/icon-americanxpress.png";
 import discover from "@/app/assets/discover.png";
 
-
 import Slider from "./slider";
+import Link from "next/link";
 
 function Home() {
-
-
-   
   return (
     <>
       <div id="banner">
@@ -29,14 +26,13 @@ function Home() {
           <div className="h-line" />
         </div>
         <div className="b-right-bside">
-            <Slider/>
-          
+          <Slider />
         </div>
         <div className="clear" />
         <div className="bottom">
-          <a href="?howitworks">
+          <Link href="/how-it-works">
             <Image src={learnMore} alt="Learn More" />
-          </a>
+          </Link>
         </div>
       </div>
 
@@ -49,9 +45,9 @@ function Home() {
             <li>Your logo, your message</li>
             <li>Publish updates in real-time</li>
           </ul>
-          <a href="?howitworks">
+          <Link href="/how-it-works">
             <Image src={learnSmall} alt="Learn More" className="hck" />
-          </a>
+          </Link>
         </div>
         <div id="payment-pack">
           <h1>Payment Processing</h1>
@@ -71,9 +67,9 @@ function Home() {
               alt="American Express"
             />
           </div>
-          <a href="?howitworks">
+          <Link href="/how-it-works">
             <Image src={learnSmall} alt="Learn More" />
-          </a>
+          </Link>
         </div>
       </div>
 
@@ -85,14 +81,14 @@ function Home() {
           <li>Full suite of reporting</li>
           <li>Email capabilities</li>
         </ul>
-        <a href="?howitworks">
+        <Link href="/how-it-works">
           <Image
             src={learnSmall}
             alt="Learn More"
             className="hck"
             objectFit="contain"
           />
-        </a>
+        </Link>
       </div>
 
       <div className="clear"></div>
